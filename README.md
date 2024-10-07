@@ -96,9 +96,14 @@ O `Makefile` fornecido simplifica o processo de compilação e execução do pro
    ```
 
    Substitua `entradaXY` pelo nome do arquivo de entrada que você deseja utilizar (sem o caminho `inputs/`).
+
+
    As entradas de exemplos seguem o seguinte padrão:
-   X -> Número de Variáveis
-   Y -> Número de Restrições
+
+
+   `X -> Número de Variáveis`
+   
+   `Y -> Número de Restrições`
 
    **Exemplo:**
 
