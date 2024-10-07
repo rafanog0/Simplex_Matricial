@@ -2,7 +2,7 @@
 
 ## Introdução
 
-Este projeto apresenta uma implementação do algoritmo Simplex em linguagem C, destinada a resolver problemas de programação linear. Esse repositorio é destinado para a disciplina "Modelos e Algoritmos de Otimização" do curso de Ciência da Computação no IDP-DF.
+Este projeto apresenta uma implementação do algoritmo Simplex (apenas maximização) em linguagem C, destinada a resolver problemas de programação linear. Esse repositorio é destinado para a disciplina "Modelos e Algoritmos de Otimização" do curso de Ciência da Computação no IDP-DF.
 
 ## Como o Programa Recebe Entradas
 
@@ -92,18 +92,21 @@ O `Makefile` fornecido simplifica o processo de compilação e execução do pro
    Para executar o programa utilizando um arquivo de entrada específico, use o seguinte comando:
 
    ```bash
-   make entradaX
+   make entradaXY
    ```
 
-   Substitua `entradaX` pelo nome do arquivo de entrada que você deseja utilizar (sem o caminho `inputs/`).
+   Substitua `entradaXY` pelo nome do arquivo de entrada que você deseja utilizar (sem o caminho `inputs/`).
+   As entradas de exemplos seguem o seguinte padrão:
+   X -> Número de Variáveis
+   Y -> Número de Restrições
 
    **Exemplo:**
 
    ```bash
-   make entrada1
+   make entrada22
    ```
 
-   Este comando executa o programa com o arquivo `inputs/entrada1` como entrada.
+   Este comando executa o programa com o arquivo `inputs/entrada22` como entrada.
 
 4. **Compilar e Executar em Sequência:**
 
