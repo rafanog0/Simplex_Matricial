@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include "/home/rafanog/desktop/otimiza/Simplex_Matricial/inc/matrizes.h"
 
+#define INFINITO 999999999999
+
 void libera_memoria_simplex(float **matriz_base, float **matriz_base_inversa, float **matriz_nao_base, float **matriz_nao_base_resultante, float *vetor_solucao, float *custos_relativos, int num_restricoes)
 {
     for (int i = 0; i < num_restricoes; i++)
@@ -81,7 +83,7 @@ float calcula_solucao(float *funcao_objetivo, float *vetor_coordenadas, int num_
 
 int busca_indice_maior_valor_vetor(float *funcao_objetivo, int num_variaveis)
 {
-    float maior_valor = -999999999999;
+    float maior_valor = -INFINITO;
     int indice_maior_valor;
     for (int i = 0; i < num_variaveis; i++)
     {
@@ -96,7 +98,7 @@ int busca_indice_maior_valor_vetor(float *funcao_objetivo, int num_variaveis)
 
 int busca_indice_menor_valor_vetor(float *funcao_objetivo, int num_variaveis)
 {
-    float menor_valor = 999999999999;
+    float menor_valor = INFINITO;
     int indice_menor_valor;
     for (int i = 0; i < num_variaveis; i++)
     {
@@ -165,10 +167,8 @@ void simplex(float *funcao_objetivo, float **matriz_variaveis_folga, float *veto
 {
     int iteracoes = 0;
     // começando pelo caso trivial
-    float melhor_solucao = -999999999999;
+    float melhor_solucao = -INFINITO;
     float *melhor_solucao_coordenadas = (float *)malloc((num_variaveis + num_restricoes) * sizeof(float));
-
-    int variavel_mais_impactante_objetivo = busca_indice_maior_valor_vetor(funcao_objetivo, num_variaveis);
 
     float solucao_encontrada;
 
