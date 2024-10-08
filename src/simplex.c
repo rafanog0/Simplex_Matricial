@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "/home/rafanog/desktop/otimiza/Simplex_Matricial/inc/matrizes.h"
+#include "matrizes.h"
 
 #define INFINITO 999999999999
 
