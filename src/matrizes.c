@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "simplex.h"
+#include "/home/rafanog/desktop/otimiza/Simplex_Matricial/inc/simplex.h"
 
 float modulo(float x)
 {

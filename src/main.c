@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "simplex.h"
-#include "matrizes.h"
+#include "/home/rafanog/desktop/otimiza/Simplex_Matricial/inc/simplex.h"
+#include "/home/rafanog/desktop/otimiza/Simplex_Matricial/inc/matrizes.h"
 
 #ifdef _WIN32
 #define CLEAR_COMMAND "cls"

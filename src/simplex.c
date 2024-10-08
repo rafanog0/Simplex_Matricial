@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "matrizes.h"
+#include "/home/rafanog/desktop/otimiza/Simplex_Matricial/inc/matrizes.h"
 
 void libera_memoria_simplex(float **matriz_base, float **matriz_base_inversa, float **matriz_nao_base, float **matriz_nao_base_resultante, float *vetor_solucao, float *custos_relativos, int num_restricoes)
 {
@@ -190,6 +190,11 @@ void simplex(float *funcao_objetivo, float **matriz_variaveis_folga, float *veto
         // mostra_matriz(matriz_base, num_restricoes, num_restricoes);
 
         float **matriz_base_inversa = calcula_matriz_inversa(num_restricoes, matriz_base);
+        if(matriz_base_inversa == NULL)
+        {
+            printf("Matriz singular\n");
+            break;
+        }
         float **matriz_nao_base = seleciona_colunas_matriz(matriz_variaveis_folga, colunas_nao_base, num_restricoes);
 
         float **matriz_nao_base_resultante = multiplica_matrizes(num_restricoes, matriz_base_inversa, matriz_nao_base);
